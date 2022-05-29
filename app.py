@@ -57,7 +57,7 @@ def login():
             'user': request.form['name'],
             'expiration': str(datetime.utcnow() + timedelta(seconds=120))},
             app.config['SECRET_KEY'])
-        return redirect("http://127.0.0.1:5000/dashboard?token={}".format(str(token.decode('utf-8'))), 302)
+        return redirect("https://flask-task-2.herokuapp.com/dashboard?token={}".format(str(token.decode('utf-8'))), 302)
     else:
         return make_response(
             'unable to verify', 403, {'auth': 'failed'}
