@@ -15,10 +15,12 @@
           {% endif %}
         {% endwith %}
     </p>
-    {% if filename %}
-        <div>
-            <img src="{{ url_for('display_image', filename=filename) }}" width="500" height="400">
-        </div>
+
+    {% if contents %}
+          <img src="{{ contents }}" style="width: 250px">
+<!--        <div>-->
+<!--            <img src="{{ url_for('display_image', filename=filename) }}" width="500" height="400">-->
+<!--        </div>-->
     {% endif %}
 </div>
 </div>
