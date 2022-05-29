@@ -6,7 +6,15 @@
 </head>
     <body>
         <p><h1 align="center">Please Input Login Details </h1></p>
-
+        <center><p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              {{ message }}
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        </p></center>
         <form action="/login" method="POST">
             <center>
             <p><input type="text" name="name" placeholder="Name" align="center" pattern="*[A-Za-z]" width="200" height="200" required></p>
