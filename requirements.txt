@@ -1,7 +1,7 @@
 Flask-JWT
 Flask-Limiter
 Jinja2
-jwt
+PyJWT
 Werkzeug
 uwsgi
 Flask
