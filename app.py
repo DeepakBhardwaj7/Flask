@@ -40,8 +40,7 @@ def token_required(f):
 
 @app.route('/')
 def home():
-    return 'hello world'
-    #return render_template('login.html')
+    return render_template('login.html')
 
 # else:
 # 	return redirect(url_for('login'))
