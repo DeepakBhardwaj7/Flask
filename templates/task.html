@@ -1,5 +1,5 @@
 <!--//templates/index.html-->
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 <title>{{title}}</title>
 </head>
@@ -7,7 +7,6 @@
 <p><h1 align="center">Python Flask Upload and display image</h1></p>
 <div class="container">
 <div class="row">
-    <h2>Select a file to upload</h2>
     <p>
         {% with messages = get_flashed_messages() %}
           {% if messages %}
@@ -24,8 +23,9 @@
     {% endif %}
 
     <form method="post" action="/upload" enctype="multipart/form-data" target="_blank">
-        <p><input type="file" name="file" class="form-control" autocomplete="off" required></p>
-        <p><input type="submit" value="Submit"></p>
+        <center><p><input type="file" name="file" class="form-control" autocomplete="off" required></p> </center>
+        <center><p><input type="submit" value="Submit"></p></center>
+
     </form>
 </div>
 </div>
