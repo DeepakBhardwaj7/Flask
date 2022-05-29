@@ -6,3 +6,4 @@ Werkzeug
 uwsgi
 Flask
 uwsgi
+boto3
