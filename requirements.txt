@@ -5,6 +5,4 @@ jwt
 Werkzeug
 uwsgi
 Flask
-Flask-JWT
 uwsgi
-
