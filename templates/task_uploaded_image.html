@@ -1,0 +1,26 @@
+<!--//templates/index.html-->
+<html>
+<head>
+<title>{{title}}</title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              {{ message }}
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+    </p>
+    {% if filename %}
+        <div>
+            <img src="{{ url_for('display_image', filename=filename) }}" width="500" height="400">
+        </div>
+    {% endif %}
+</div>
+</div>
+</body>
+</html>
