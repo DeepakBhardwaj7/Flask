@@ -83,9 +83,8 @@ def login():
             app.config['SECRET_KEY'])
         return redirect("https://flask-task-2.herokuapp.com/dashboard?token={}".format(str(token.decode('utf-8'))), 302)
     else:
-        return make_response(
-            'unable to verify', 403, {'auth': 'failed'}
-        )
+        flash('Invalid User Password, please try again.')
+        return render_template('login.html')
 
 @token_required
 def allowed_file(filename):
