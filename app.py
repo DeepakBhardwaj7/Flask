@@ -14,8 +14,8 @@ app.config['SECRET_KEY'] = "some-secret key"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024  #size till 10 mb
 app.config['S3_BUCKET'] = "flask-task"
-app.config['S3_KEY'] = "AKIA6JRRQREYDQUSHEOF"
-app.config['S3_SECRET'] = "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"
+app.config['S3_KEY'] = "Access-key"
+app.config['S3_SECRET'] = "Secreat-key"
 app.config['S3_LOCATION'] = 'http://{}.s3.amazonaws.com/'.format(app.config['S3_BUCKET'])
 
 
